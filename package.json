@@ -1,18 +1,14 @@
 {
-  "name": "rna-plafond-proxy",
-  "version": "1.0.0",
-  "description": "Proxy server-side per chiamate API al portale RNA (Registro Nazionale Aiuti di Stato)",
-  "main": "index.js",
+  "name": "rna-proxy1",
+  "version": "4.3.0",
+  "private": true,
+  "description": "Cloudflare Worker per RNA Plafond Manager (proxy RNA, KV, auth, sync HubSpot)",
+  "main": "src/worker.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "node-fetch": "^2.7.0"
-  },
-  "engines": {
-    "node": ">=16.0.0"
+  "devDependencies": {
+    "wrangler": "^4.105.0"
   }
 }
